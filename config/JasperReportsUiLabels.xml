@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="https://ofbiz.apache.org/dtds/ofbiz-properties.xsd">
+    <property key="JasperReportsApplication">
+        <value xml:lang="en">JasperReports</value>
+        <value xml:lang="fr">JasperReports</value>
+        <value xml:lang="ja">JasperReports</value>
+    </property>
+    <property key="JasperReportsCompanyName">
+        <value xml:lang="en">OFBiz: JasperReports</value>
+        <value xml:lang="fr">OFBiz : JasperReports</value>
+        <value xml:lang="ja">OFBiz: JasperReports</value>
+    </property>
+    <property key="JasperReportsMainTitle">
+        <value xml:lang="en">JasperReports PDF Reporting</value>
+        <value xml:lang="fr">Rapports PDF JasperReports</value>
+        <value xml:lang="ja">JasperReports PDF レポート</value>
+    </property>
+    <property key="JasperReportsMainDescription">
+        <value xml:lang="en">This component exposes a generic JasperReports view handler. Point a view-map of type "jasperreports" at a .jrxml or .jasper template to render it to PDF (default), CSV or XML.</value>
+        <value xml:lang="fr">Ce composant expose un gestionnaire de vue JasperReports générique. Pointez une view-map de type « jasperreports » vers un modèle .jrxml ou .jasper pour le générer en PDF (par défaut), CSV ou XML.</value>
+        <value xml:lang="ja">このコンポーネントは汎用の JasperReports ビューハンドラを提供します。type="jasperreports" の view-map から .jrxml または .jasper テンプレートを指定すると、PDF（既定）/CSV/XML で出力できます。</value>
+    </property>
+    <property key="JasperReportsSampleTitle">
+        <value xml:lang="en">Sample Report (verification)</value>
+        <value xml:lang="fr">Rapport d'exemple (vérification)</value>
+        <value xml:lang="ja">サンプルレポート（動作確認）</value>
+    </property>
+    <property key="JasperReportsSamplePdf">
+        <value xml:lang="en">Run sample report (PDF)</value>
+        <value xml:lang="fr">Générer le rapport d'exemple (PDF)</value>
+        <value xml:lang="ja">サンプルレポートを実行 (PDF)</value>
+    </property>
+    <property key="JasperReportsSampleCsv">
+        <value xml:lang="en">Run sample report (CSV)</value>
+        <value xml:lang="fr">Générer le rapport d'exemple (CSV)</value>
+        <value xml:lang="ja">サンプルレポートを実行 (CSV)</value>
+    </property>
+    <property key="JasperReportsSampleXml">
+        <value xml:lang="en">Run sample report (XML)</value>
+        <value xml:lang="fr">Générer le rapport d'exemple (XML)</value>
+        <value xml:lang="ja">サンプルレポートを実行 (XML)</value>
+    </property>
+</resource>

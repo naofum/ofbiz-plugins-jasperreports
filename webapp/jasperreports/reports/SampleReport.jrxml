@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+
+    Sample report used to verify the JasperReports view handler.
+    It needs no database query, so it renders a single page using only
+    built-in and request-supplied parameters.
+
+    This uses the JasperReports 7.x native JRXML syntax:
+      - single-band sections (title, pageFooter) hold <element> children directly
+        and carry their own "height" attribute (no nested <band>);
+      - the multi-band "detail" section wraps its band in <band>;
+      - visual elements use <element kind="..."> with x/y/width/height attributes;
+      - static text uses a child <text>, dynamic text a child <expression>.
+    No xmlns / external schema is declared, because 7.x forbids external
+    DTD/schema references by default and validates with its internal schema.
+-->
+<jasperReport name="SampleReport"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555" leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              whenNoDataType="AllSectionsNoDetail"
+              uuid="7f1b0f2a-0c0a-4a1a-9b2e-0a1b2c3d4e5f">
+
+    <!-- Optional parameter supplied from the OFBiz request (e.g. ?reportTitle=Hello). -->
+    <parameter name="reportTitle" class="java.lang.String">
+        <defaultValueExpression><![CDATA["Apache OFBiz - JasperReports Sample"]]></defaultValueExpression>
+    </parameter>
+
+    <title height="90">
+        <element kind="staticText" x="0" y="0" width="555" height="40" fontSize="22.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+            <text><![CDATA[JasperReports Plugin]]></text>
+        </element>
+        <element kind="line" x="0" y="45" width="555" height="1"/>
+        <element kind="textField" x="0" y="55" width="555" height="25" fontSize="14.0" blankWhenNull="true" hTextAlign="Center">
+            <expression><![CDATA[$P{reportTitle}]]></expression>
+        </element>
+    </title>
+
+    <detail>
+        <band height="60">
+            <element kind="staticText" x="0" y="10" width="150" height="20" fontSize="12.0" bold="true" vTextAlign="Middle">
+                <text><![CDATA[Generated at:]]></text>
+            </element>
+            <element kind="textField" x="150" y="10" width="405" height="20" fontSize="12.0" vTextAlign="Middle" pattern="yyyy-MM-dd HH:mm:ss">
+                <expression><![CDATA[new java.util.Date()]]></expression>
+            </element>
+            <element kind="staticText" x="0" y="35" width="555" height="20" fontSize="11.0" italic="true" vTextAlign="Middle">
+                <text><![CDATA[If you can read this PDF, the JasperReports view handler is working.]]></text>
+            </element>
+        </band>
+    </detail>
+
+    <pageFooter height="20">
+        <element kind="textField" x="455" y="0" width="100" height="15" hTextAlign="Right">
+            <expression><![CDATA["Page " + $V{PAGE_NUMBER}]]></expression>
+        </element>
+    </pageFooter>
+
+</jasperReport>

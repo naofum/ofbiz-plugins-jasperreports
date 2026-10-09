@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="https://ofbiz.apache.org/dtds/ofbiz-properties.xsd">
+    <property key="JasperReportsErrorNoTemplate">
+        <value xml:lang="en">No report template was specified for the JasperReports view.</value>
+        <value xml:lang="fr">Aucun modèle de rapport n'a été spécifié pour la vue JasperReports.</value>
+        <value xml:lang="ja">JasperReports ビューにレポートテンプレートが指定されていません。</value>
+    </property>
+    <property key="JasperReportsErrorTemplateNotFound">
+        <value xml:lang="en">The report template could not be found or opened.</value>
+        <value xml:lang="fr">Le modèle de rapport est introuvable ou ne peut être ouvert.</value>
+        <value xml:lang="ja">レポートテンプレートが見つからないか、開けませんでした。</value>
+    </property>
+    <property key="JasperReportsErrorCompile">
+        <value xml:lang="en">Failed to compile the JasperReports template.</value>
+        <value xml:lang="fr">Échec de la compilation du modèle JasperReports.</value>
+        <value xml:lang="ja">JasperReports テンプレートのコンパイルに失敗しました。</value>
+    </property>
+    <property key="JasperReportsErrorFillOrExport">
+        <value xml:lang="en">Failed to fill or export the JasperReports document.</value>
+        <value xml:lang="fr">Échec du remplissage ou de l'export du document JasperReports.</value>
+        <value xml:lang="ja">JasperReports ドキュメントの生成またはエクスポートに失敗しました。</value>
+    </property>
+    <property key="JasperReportsErrorNoDelegator">
+        <value xml:lang="en">No entity delegator was available on the request to render the report.</value>
+        <value xml:lang="fr">Aucun délégué d'entité n'était disponible sur la requête pour générer le rapport.</value>
+        <value xml:lang="ja">レポート生成に必要なエンティティ delegator がリクエストにありません。</value>
+    </property>
+</resource>
